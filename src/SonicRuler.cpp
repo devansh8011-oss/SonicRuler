@@ -1,9 +1,9 @@
-#include "EasyUltrasonic.h"
+#include "SonicRuler.h"
 
-EasyUltrasonic::EasyUltrasonic(uint8_t trigPin, uint8_t echoPin)
+SonicRuler::SonicRuler(uint8_t trigPin, uint8_t echoPin)
   : _trigPin(trigPin), _echoPin(echoPin), _ready(false) {}
 
-float EasyUltrasonic::readDistance(DistanceUnit unit) {
+float SonicRuler::readDistance(DistanceUnit unit) {
   // Set up pins on first use
   if (!_ready) {
     pinMode(_trigPin, OUTPUT);

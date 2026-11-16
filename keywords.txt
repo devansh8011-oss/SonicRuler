@@ -1,4 +1,4 @@
-EasyUltrasonic	KEYWORD1
+SonicRuler	KEYWORD1
 DistanceUnit	KEYWORD1
 readDistance	KEYWORD2
 MM	LITERAL1

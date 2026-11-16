@@ -1,4 +1,4 @@
-<h1 align="center">EasyUltrasonic</h1>
+<h1 align="center">SonicRuler</h1>
 
 <p align="center">
   <b>The simplest way to use an HC-SR04 ultrasonic sensor with Arduino.</b><br>
@@ -33,7 +33,7 @@
 No `pinMode()`, no `pulseIn()`, no maths. Create the sensor with its **TRIG** and **ECHO** pins and call `readDistance()` with the unit you want.
 
 ```cpp
-EasyUltrasonic ultrasonic(9, 10);         // TRIG, ECHO
+SonicRuler ultrasonic(9, 10);         // TRIG, ECHO
 float d = ultrasonic.readDistance(CM);    // that's it
 ```
 
@@ -43,15 +43,18 @@ float d = ultrasonic.readDistance(CM);    // that's it
 
 ## Installation
 
-### Arduino IDE
-1. Download [`EasyUltrasonic.zip`](EasyUltrasonic.zip), or click **Code → Download ZIP**.
+### Arduino IDE — Library Manager
+Open **Tools → Manage Libraries…**, search for **SonicRuler** and click **Install**.
+
+### Arduino IDE — ZIP
+1. Download the latest ZIP from [Releases](https://github.com/devansh8011-oss/SonicRuler/releases), or click **Code → Download ZIP**.
 2. Open **Sketch → Include Library → Add .ZIP Library…** and select the file.
-3. Examples appear under **File → Examples → EasyUltrasonic**.
+3. Examples appear under **File → Examples → SonicRuler**.
 
 ### PlatformIO
 ```ini
 lib_deps =
-    https://github.com/devansh8011-oss/EasyUltrasonic.git
+    https://github.com/devansh8011-oss/SonicRuler.git
 ```
 
 ---
@@ -72,9 +75,9 @@ lib_deps =
 ## Quick Start
 
 ```cpp
-#include <EasyUltrasonic.h>
+#include <SonicRuler.h>
 
-EasyUltrasonic ultrasonic(9, 10);   // (TRIG, ECHO)
+SonicRuler ultrasonic(9, 10);   // (TRIG, ECHO)
 
 void setup() {
   Serial.begin(9600);
@@ -97,7 +100,7 @@ Open the Serial Monitor at **9600 baud**.
 ### Constructor
 
 ```cpp
-EasyUltrasonic(uint8_t trigPin, uint8_t echoPin);
+SonicRuler(uint8_t trigPin, uint8_t echoPin);
 ```
 
 | Parameter | Description |
@@ -106,7 +109,7 @@ EasyUltrasonic(uint8_t trigPin, uint8_t echoPin);
 | `echoPin` | Pin connected to ECHO |
 
 ```cpp
-EasyUltrasonic ultrasonic(9, 10);
+SonicRuler ultrasonic(9, 10);
 ```
 
 ### `readDistance()`
@@ -144,9 +147,9 @@ float d3 = ultrasonic.readDistance(INCH);   // inches
 
 ### Print every unit
 ```cpp
-#include <EasyUltrasonic.h>
+#include <SonicRuler.h>
 
-EasyUltrasonic ultrasonic(9, 10);
+SonicRuler ultrasonic(9, 10);
 
 void setup() {
   Serial.begin(9600);
@@ -166,9 +169,9 @@ void loop() {
 
 ### Handle "out of range"
 ```cpp
-#include <EasyUltrasonic.h>
+#include <SonicRuler.h>
 
-EasyUltrasonic ultrasonic(9, 10);
+SonicRuler ultrasonic(9, 10);
 
 void setup() {
   Serial.begin(9600);
@@ -189,9 +192,9 @@ void loop() {
 
 ### Obstacle alert with an LED
 ```cpp
-#include <EasyUltrasonic.h>
+#include <SonicRuler.h>
 
-EasyUltrasonic ultrasonic(9, 10);
+SonicRuler ultrasonic(9, 10);
 
 void setup() {
   pinMode(13, OUTPUT);
@@ -206,10 +209,10 @@ void loop() {
 
 ### Two sensors
 ```cpp
-#include <EasyUltrasonic.h>
+#include <SonicRuler.h>
 
-EasyUltrasonic front(9, 10);
-EasyUltrasonic back(5, 6);
+SonicRuler front(9, 10);
+SonicRuler back(5, 6);
 
 void setup() {
   Serial.begin(9600);
@@ -240,13 +243,13 @@ void loop() {
 ## Library Structure
 
 ```
-EasyUltrasonic/
+SonicRuler/
 ├── examples/
 │   ├── AllUnits/AllUnits.ino
 │   └── BasicDistance/BasicDistance.ino
 ├── src/
-│   ├── EasyUltrasonic.cpp
-│   └── EasyUltrasonic.h
+│   ├── SonicRuler.cpp
+│   └── SonicRuler.h
 ├── keywords.txt
 ├── library.properties
 ├── LICENSE

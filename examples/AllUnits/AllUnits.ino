@@ -1,7 +1,7 @@
 // AllUnits - print the distance in every unit
-#include <EasyUltrasonic.h>
+#include <SonicRuler.h>
 
-EasyUltrasonic ultrasonic(9, 10);   // (TRIG, ECHO)
+SonicRuler ultrasonic(9, 10);   // (TRIG, ECHO)
 
 void setup() {
   Serial.begin(9600);

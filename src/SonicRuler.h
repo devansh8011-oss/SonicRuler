@@ -1,20 +1,20 @@
 /*
-  EasyUltrasonic.h - Simple library for HC-SR04 ultrasonic sensors.
+  SonicRuler.h - Simple library for HC-SR04 ultrasonic sensors.
   Give it the TRIG and ECHO pins, then call readDistance().
   MIT License.
 */
 
-#ifndef EASY_ULTRASONIC_H
-#define EASY_ULTRASONIC_H
+#ifndef SONIC_RULER_H
+#define SONIC_RULER_H
 
 #include <Arduino.h>
 
 // Units for readDistance()
 enum DistanceUnit { MM, CM, M, KM, INCH, FEET };
 
-class EasyUltrasonic {
+class SonicRuler {
   public:
-    EasyUltrasonic(uint8_t trigPin, uint8_t echoPin);
+    SonicRuler(uint8_t trigPin, uint8_t echoPin);
 
     // Returns distance in the chosen unit (default CM).
     // Returns -1 if nothing is in range.
