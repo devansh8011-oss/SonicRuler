@@ -1,17 +1,6 @@
 EasyUltrasonic	KEYWORD1
 DistanceUnit	KEYWORD1
-begin	KEYWORD2
 readDistance	KEYWORD2
-read_distance	KEYWORD2
-readCM	KEYWORD2
-readMM	KEYWORD2
-readM	KEYWORD2
-readKM	KEYWORD2
-readInch	KEYWORD2
-readAverage	KEYWORD2
-readEchoTime	KEYWORD2
-setTimeout	KEYWORD2
-setTemperature	KEYWORD2
 MM	LITERAL1
 CM	LITERAL1
 M	LITERAL1
